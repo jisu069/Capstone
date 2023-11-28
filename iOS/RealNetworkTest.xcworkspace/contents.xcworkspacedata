@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../Downloads/new (3).gpx">
+   </FileRef>
+   <FileRef
+      location = "group:../../Downloads/gpxgenerator_path.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:../../Downloads/gpxgenerator_path-3.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:RealNetworkTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
