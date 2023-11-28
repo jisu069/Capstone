@@ -1,0 +1,6 @@
+module Pods_RealNetworkTest {
+  umbrella header "Pods-RealNetworkTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
