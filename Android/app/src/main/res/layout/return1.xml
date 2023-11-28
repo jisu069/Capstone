@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Return1"
+    android:id="@+id/main_frame">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.naver.maps.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/direction"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            android:text="길찾기"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/turn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/shortestView"
+            android:layout_width="60dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_background"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/shortest"
+            app:layout_constraintStart_toStartOf="@+id/shortest"
+            app:layout_constraintTop_toTopOf="@+id/shortest" />
+
+        <View
+            android:id="@+id/mainstreetView"
+            android:layout_width="60dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_background2"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/mainstreet"
+            app:layout_constraintStart_toStartOf="@+id/mainstreet"
+            app:layout_constraintTop_toTopOf="@+id/mainstreet" />
+
+        <View
+            android:id="@+id/saferouteView"
+            android:layout_width="60dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_background3"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/saferoute"
+            app:layout_constraintStart_toStartOf="@+id/saferoute"
+            app:layout_constraintTop_toTopOf="@+id/saferoute" />
+
+        <View
+            android:id="@+id/optimalView"
+            android:layout_width="60dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_background4"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/optimal"
+            app:layout_constraintStart_toStartOf="@+id/optimal"
+            app:layout_constraintTop_toTopOf="@+id/optimal" />
+
+        <Button
+            android:id="@+id/guidance"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            android:text="경로안내\n"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/shortest"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/button"
+            android:padding="0dp"
+            android:text="큰길우선\n\n\n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mainstreet"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/mainstreet"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/button"
+            android:padding="0dp"
+            android:text="최단거리\n\n\n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saferoute"
+            app:layout_constraintStart_toEndOf="@+id/shortest" />
+
+        <Button
+            android:id="@+id/saferoute"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/button"
+            android:padding="0dp"
+            android:text="안심거리\n\n\n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/optimal"
+            app:layout_constraintStart_toEndOf="@+id/mainstreet" />
+
+        <Button
+            android:id="@+id/optimal"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@drawable/button"
+            android:padding="0dp"
+            android:text="계산최단거리\n\n\n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/saferoute" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
